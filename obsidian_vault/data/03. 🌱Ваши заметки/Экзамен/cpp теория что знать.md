@@ -5,7 +5,7 @@ tags:
   - note
   - exam/theory
   - msk
-project: "[[CPP_Ex]]"
+project: "[[data/99. 🗃️Картотека/Все проекты/CPP/CPP_Ex]]"
 s21-authors: []
 branch: "[[CPP]]"
 source: https://t.me/c/1975595161/116855/

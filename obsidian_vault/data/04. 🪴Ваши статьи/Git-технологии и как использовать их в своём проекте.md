@@ -8,7 +8,7 @@ project:
 s21-authors:
   - "[[ereva]]"
 branch: 
-title: Введение в String+ – ereva
+title: Git-технологии и как использовать их в своём проекте – ereva
 source: https://held-stingray-d76.notion.site/Git-35b667b7561e4996bf6d459b4422705b
 ---
 

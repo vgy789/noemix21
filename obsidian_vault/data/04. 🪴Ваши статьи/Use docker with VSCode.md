@@ -7,6 +7,7 @@ tags:
 project: "[[DO5_SimpleDocker]]"
 s21-authors: []
 branch: "[[DevOPS]]"
+title: 
 source: https://held-stingray-d76.notion.site/Use-docker-with-VSCode-748c373248dc4d869a1e1876ac9c5663
 ---
 

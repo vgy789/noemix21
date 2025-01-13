@@ -5,7 +5,7 @@ tags:
   - note
   - nsk
   - video/lecture
-project: "[[SmartCalc_v2.0]]"
+project: "[[data/99. 🗃️Картотека/Все проекты/CPP/SmartCalc_v2.0]]"
 s21-authors:
   - "[[hanalesh]]"
 branch: "[[CPP]]"

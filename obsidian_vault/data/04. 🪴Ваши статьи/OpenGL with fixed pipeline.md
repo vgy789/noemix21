@@ -9,7 +9,7 @@ project: "[[C8 3DViewer_v1.0]]"
 s21-authors:
   - "[[knikia]]"
 branch: "[[C]]"
-title: Введение в String+ – knikia
+title: OpenGL with fixed pipeline – knikia
 source: https://21-school-by-students.notion.site/OpenGL-with-fixed-pipeline-28716878a15245eba648faabcc10bf48
 ---
 
