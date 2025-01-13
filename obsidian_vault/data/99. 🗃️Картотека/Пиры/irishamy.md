@@ -1,8 +1,8 @@
 ---
 share: true
 tags:
-  - peer
   - msk
+  - peer
 ---
 
 > [!summary] Причастен к

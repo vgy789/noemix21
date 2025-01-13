@@ -2,9 +2,9 @@
 share: true
 date: 2024-07-12
 tags:
-  - note
   - exam/theory
   - msk
+  - note
 project: "[[data/99. 🗃️Картотека/Все проекты/C++/CPP_Ex]]"
 s21-authors: []
 branch: "[[C++]]"

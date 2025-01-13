@@ -8,15 +8,10 @@ extract_block_list() {
   local block_name="$2"
   local list
 
-  # Extract elements from specified block
   list=$(awk "/^$block_name:/ {found=1; next} /^\S/ {found=0} found && /^ *- / {gsub(/^- */, \"\"); print}" "$file" |
-    sed 's/"//g' |   # Remove quotes
-    sed 's/^ *- *//' | # Remove dashes
-    tr '\n' ',' |   # Convert list to string
-    sed 's/,/, /g' | # Add space after each comma
-    sed 's/, $//')   # Remove trailing comma
-
-  echo "$list"
+    sed 's/^[[:space:]]*- //g' | tr '\n' ',' | sed 's/,/, /g; s/, $//')
+    
+  printf "%s\n" "$list"
 }
 
 extract_field() {
@@ -25,7 +20,7 @@ extract_field() {
   local result
 
   result=$(grep "^$field:" "$file" | sed -E "s/^$field:\s*(.*)/\1/" | xargs)
-  echo "$result"
+  printf "%s\n" "$result"
 }
 
 create_table_in_file() {
@@ -34,7 +29,6 @@ create_table_in_file() {
 
   printf "Processing file: %s\n" "$file"
 
-  # Extract metadata fields
   city=$(extract_field "$file" "city")
   leaders=$(extract_block_list "$file" "s21-leader")
   social_link=$(extract_field "$file" "social-link")
@@ -50,14 +44,12 @@ create_table_in_file() {
   deprecated=$(extract_field "$file" "deprecated")
   edu=$(extract_field "$file" "edu")
 
-  # Sanitize and format metadata
   deprecated=${deprecated:-"false"}
   local deprecated_label
   deprecated_label=$([[ "$deprecated" == "true" ]] && echo "Да" || echo "Нет")
   [[ -n $edu ]] && edu_md="$edu"
   [[ -n $social_link ]] && source_md="[Ссылка]($social_link)"
 
-  # Add available data to the table
   [[ -n $city ]] &&         table+="| Город       | $city         |\n"
   [[ -n $leaders ]] &&      table+="| Лидеры      | $leaders      |\n"
   [[ -n $social_link ]] &&  table+="| Группа      | $source_md      |\n"
@@ -73,24 +65,18 @@ create_table_in_file() {
   [[ -n $edu_md ]] &&      table+="| На платформе | $edu_md        |\n"
   [[ "$deprecated" != "false" ]] && table+="| Устаревший   | $deprecated_label|\n"
 
-  # Locate end of YAML metadata block
   yaml_end=$(grep -n '^---$' "$file" | sed -n '2p' | cut -d: -f1)
   if [[ -z $yaml_end ]]; then
     printf "Error: YAML block not found in %s\n" "$file" >&2
-    return
+    return 1
   fi
 
-  # Insert table below the YAML block
-  if [[ -n $table ]]; then
-    sed -i "$((yaml_end + 2))i \
+  # Ensure empty lines are replaced with a proper table
+  sed -i "$((yaml_end + 1)) a\\
 | Поле            | Значение         |\n\
 |------------- |---------------- |\n\
 $table\n\
 ___" "$file"
-    # printf "Table added to: %s\n" "$file"
-  else
-    # printf "No valid data to create a table for file: %s\n" "$file"
-  fi
 }
 
 process_md_files_recursive() {

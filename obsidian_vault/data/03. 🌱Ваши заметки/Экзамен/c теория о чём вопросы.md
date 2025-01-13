@@ -2,9 +2,9 @@
 share: true
 date: 2024-04-20
 tags:
-  - note
   - exam/theory
   - msk
+  - note
 project: "[[C_Ex|C_Ex]]"
 s21-authors: []
 branch: "[[C|C]]"

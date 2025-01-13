@@ -2,9 +2,9 @@
 share: true
 date: 2024-11-22
 tags:
-  - note
   - exam/theory
   - msk
+  - note
 project: "[[DO_Ex-t|DO_Ex-t]]"
 s21-authors:
   - "[[genniebu]]"

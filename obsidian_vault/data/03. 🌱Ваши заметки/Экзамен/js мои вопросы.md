@@ -2,9 +2,9 @@
 share: true
 date: 2024-12-08
 tags:
-  - note
   - exam/theory
   - msk
+  - note
 project: 
 s21-authors: []
 branch: "[[JS (Frontend)]]"

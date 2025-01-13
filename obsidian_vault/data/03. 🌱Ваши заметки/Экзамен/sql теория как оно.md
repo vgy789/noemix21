@@ -2,9 +2,9 @@
 share: true
 date: 2024-04-04
 tags:
-  - note
   - exam/theory
   - msk
+  - note
 project: "[[SQL_Ex]]"
 s21-authors:
   - "[[borshutz]]"

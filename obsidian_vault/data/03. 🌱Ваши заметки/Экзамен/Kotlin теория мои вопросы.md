@@ -2,9 +2,9 @@
 share: true
 date: 2024-12-12
 tags:
-  - note
   - exam/theory
   - msk
+  - note
 project: 
 s21-authors: []
 branch: "[[Kotlin|Kotlin]]"

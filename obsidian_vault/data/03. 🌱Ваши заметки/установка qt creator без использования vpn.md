@@ -2,8 +2,8 @@
 share: true
 date: 
 tags:
-  - note
   - article
+  - note
 project: 
 s21-authors: []
 branch: "[[C++]]"

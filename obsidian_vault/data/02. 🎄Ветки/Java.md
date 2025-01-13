@@ -2,8 +2,8 @@
 share: true
 tags:
   - branch
-description: Java — это C++, из которого убрали все пистолеты, ножи и дубинки. - James Gosling
 title: Язык Java
+description: Java — это C++, из которого убрали все пистолеты, ножи и дубинки. - James Gosling
 ---
 
 > Java — это C++, из которого убрали все пистолеты, ножи и дубинки.

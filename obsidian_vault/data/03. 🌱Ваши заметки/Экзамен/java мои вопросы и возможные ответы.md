@@ -2,9 +2,9 @@
 share: true
 date: 2024-10-06
 tags:
-  - note
   - exam/theory
   - msk
+  - note
 project: 
 s21-authors: []
 branch: "[[Java|Java]]"
