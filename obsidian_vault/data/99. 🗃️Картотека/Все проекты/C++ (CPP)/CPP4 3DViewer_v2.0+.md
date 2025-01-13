@@ -3,7 +3,7 @@ share: true
 tags:
   - project
 project-type: team
-branch: "[[C++ (CPP)]]"
+branch: "[[CPP]]"
 xp: 800
 xp-with-bonus: 
 group: CPP - 1

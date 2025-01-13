@@ -1,5 +1,5 @@
 ---
-share: false
+share: true
 tags:
   - branch
 title: Язык C#

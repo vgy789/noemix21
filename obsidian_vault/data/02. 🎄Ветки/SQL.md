@@ -7,7 +7,9 @@ title: Язык SQL
 
 > [!important] Чат
 >  У этой ветки [один общий чат в Telegram](https://t.me/+5xlNV70Bw1w5OTM6)
+
 ___
+
 > [!note]- Все заметки по проектам SQL
 > ```dataview
 > TABLE WITHOUT ID

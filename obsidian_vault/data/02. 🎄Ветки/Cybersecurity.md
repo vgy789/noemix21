@@ -6,6 +6,7 @@ tags:
 
 > [!important] Чат
 >  У этой ветки [один общий чат в Telegram](https://t.me/+a85WycvCrtxiNjYy)
+
 ___
 > [!note]- Все заметки по проектам Cybersecurity
 > ```dataview

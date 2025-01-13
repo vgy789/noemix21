@@ -8,7 +8,7 @@ tags:
 project: "[[SmartCalc_v2.0]]"
 s21-authors:
   - "[[hanalesh]]"
-branch: "[[C++ (CPP)]]"
+branch: "[[CPP]]"
 source: https://held-stingray-d76.notion.site/C-d491bee014b34651a8e7b93f6be2631c
 ---
 

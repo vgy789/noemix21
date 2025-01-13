@@ -7,7 +7,7 @@ tags:
   - msk
 project: "[[CPP_Ex]]"
 s21-authors: []
-branch: "[[C++ (CPP)]]"
+branch: "[[CPP]]"
 source: https://t.me/c/1975595161/116855/
 ---
 

@@ -6,6 +6,7 @@ tags:
 
 > [!important] Чат
 >  У этой ветки [один общий чат в Telegram](
+
 ___
 > [!note]- Все заметки по проектам branchname
 > ```dataview

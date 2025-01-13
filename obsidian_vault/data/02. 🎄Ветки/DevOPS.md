@@ -6,6 +6,7 @@ tags:
 
 > [!important] Чат
 >  У этой ветки [один общий чат в Telegram](https://t.me/+MPogbcEDJ-JhZWE6)
+
 ___
 > [!note]- Все заметки по проектам DevOPS
 > ```dataview

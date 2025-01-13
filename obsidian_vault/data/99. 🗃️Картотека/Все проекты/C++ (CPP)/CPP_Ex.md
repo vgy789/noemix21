@@ -3,7 +3,7 @@ share: true
 tags:
   - project
 project-type: exam-module
-branch: "[[C++ (CPP)]]"
+branch: "[[CPP]]"
 xp: 200
 xp-with-bonus: 
 group: CPP - 1
