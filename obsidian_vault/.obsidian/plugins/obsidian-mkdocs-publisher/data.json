@@ -19,7 +19,7 @@
     },
     "otherRepo": [],
     "verifiedRepo": true,
-    "rateLimit": 4981
+    "rateLimit": 4997
   },
   "upload": {
     "behavior": "obsidian",
@@ -38,7 +38,7 @@
       "excluded": []
     },
     "folderNote": {
-      "enable": true,
+      "enable": false,
       "rename": "_index.md",
       "addTitle": {
         "enable": true,

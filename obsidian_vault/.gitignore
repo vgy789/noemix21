@@ -11,7 +11,7 @@ _preprocessed
 # .obsidian
 .obsidian/themes
 !themes/Minimal
-.env
-env
+# .env
+# env
 hotkeys.json
 workspace.json
