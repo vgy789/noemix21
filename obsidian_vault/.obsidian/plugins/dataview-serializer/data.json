@@ -1,0 +1,10 @@
+{
+  "foldersToScan": [
+    "output"
+  ],
+  "ignoredFolders": [
+    "data/_templates",
+    "data/_materials",
+    "data/_obsidian helper"
+  ]
+}

@@ -1,0 +1,17 @@
+# IDE folders
+.idea/
+.vscode/
+.DS_Store/
+
+# Obsidian vault
+._*
+_preprocessed
+.trash/
+
+# .obsidian
+.obsidian/themes
+!themes/Minimal
+.env
+env
+hotkeys.json
+workspace.json

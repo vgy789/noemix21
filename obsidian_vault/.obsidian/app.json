@@ -1,0 +1,8 @@
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "data/99. 🗃️Картотека/materials",
+  "userIgnoreFilters": [
+    "_preprocessed/"
+  ]
+}

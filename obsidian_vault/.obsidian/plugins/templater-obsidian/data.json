@@ -1,0 +1,73 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "data/_assets/_templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "data/99. 🗃️Картотека/Клубы/Казань",
+      "template": "data/_assets/_templates/Клуб.md"
+    },
+    {
+      "folder": "data/99. 🗃️Картотека/Клубы/Москва",
+      "template": "data/_assets/_templates/Клуб.md"
+    },
+    {
+      "folder": "data/99. 🗃️Картотека/Клубы/Новосибирск",
+      "template": "data/_assets/_templates/Клуб.md"
+    },
+    {
+      "folder": "data/99. 🗃️Картотека/Клубы/Великий Новгород",
+      "template": "data/_assets/_templates/Клуб.md"
+    },
+    {
+      "folder": "data/99. 🗃️Картотека/Клубы/Сургут",
+      "template": "data/_assets/_templates/Клуб.md"
+    },
+    {
+      "folder": "data/99. 🗃️Картотека/Клубы/Белгород",
+      "template": "data/_assets/_templates/Клуб.md"
+    },
+    {
+      "folder": "data/04. 🪴Ваши статьи",
+      "template": "data/_assets/_templates/Заметка.md"
+    },
+    {
+      "folder": "data/03. 🌱Ваши заметки",
+      "template": "data/_assets/_templates/Заметка.md"
+    },
+    {
+      "folder": "data/99. 🗃️Картотека/Все проекты",
+      "template": "data/_assets/_templates/Проект.md"
+    },
+    {
+      "folder": "data/99. 🗃️Картотека/Пиры",
+      "template": "data/_assets/_templates/Peer.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "_templates/Проект.md"
+  ],
+  "startup_templates": [
+    ""
+  ]
+}

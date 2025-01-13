@@ -1,0 +1,43 @@
+---
+share: true
+date: 
+tags:
+  - note
+  - article
+project: 
+s21-authors: []
+branch: "[[C++ (CPP)]]"
+source: https://held-stingray-d76.notion.site/Qt-Creator-VPN-bef07cc35c8946dfae0b78f566f23085?pvs=25
+---
+
+## Установка Qt Creator без использования VPN
+### Скачивание QtCreator
+Для установки можно использовать Offline Installer, он не требует регистрации, но его для его скачивания требуется VPN, поэтому Я залил его себе на я.диск, можете скачать его здесь:
+
+Если у вас есть второй комп с VPN, и вы не хотите использовать мою ссылку, то можете скачать файл с официального сайта:
+
+Для установки достаточно открыть .dmg файл, и перетащить из него Qt [Creator.app](http://creator.app/) в `goinfre`.
+
+### Настройка Qt Creator
+- На всех маках в кампусе уже предустановлена библиотека Qt, но QtCreator её не видит, поэтому при попытке создать проект мы не сможем пройти дальше этапа Kit selection.
+![[qt_no_vpn_1.png]]
+- Открывает настройки (Cmd+,) переходим в пункт Kits → Qt Version → Add...
+![[qt_no_vpn_2.png]]
+- В диалоге выбора файла нужно нажать Cmd+Shift+G и ввести туда /usr/local/Cellar/qt/6.2.3/bin/
+![[qt_no_vpn_3.png]]
+- Далее, выбираем qmake6 и нажимаем Open
+![[qt_no_vpn_4.png]]
+- После этого нужно закрыть окно Preferences нажав OK и открыть его заново (Cmd+,)
+- Возвращаемся во вкладку Kits и выбираем Desktop 64bit
+![[qt_no_vpn_5.png]]
+- В этом же окне спускаемся ниже и выбираем Qt 6 в Qt Version
+![[qt_no_vpn_6.png]]
+- После этого можно создавать проект
+![[qt_no_vpn_7.png]]
+
+### Сборка
+
+- Если при сборке появляется такая ошибка:
+![[qt_no_vpn_8.png]]
+- Нужно прейти во вкладку Projects → Run, Нажать на Details рядом со словом Environment, поочередно выделить DYLD\_LIBRARY\_PATH, DYLD\_FRAMEWORK\_PATH и нажать Unset
+![[qt_no_vpn_9.png]]

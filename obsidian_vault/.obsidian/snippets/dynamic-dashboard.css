@@ -1,0 +1,16 @@
+.dashboard div.markdown-preview-section > div.el-pre > div.block-language-dataviewjs > p > span > ul {
+  list-style: none;
+  display: flex;
+  column-gap: 50px;
+  flex-flow: row wrap;
+}
+
+.dashboard div.block-language-dataviewjs > p > span > ul > li {
+  min-width: 230px;
+  width: 15%;
+  list-style-type: none;
+}
+
+.dashboard div.block-language-dataviewjs > p > span > ul > li ::marker {
+  font-size: 0.8em;
+}

@@ -1,0 +1,130 @@
+{
+  "github": {
+    "user": "vgy789",
+    "repo": "test",
+    "branch": "main",
+    "automaticallyMergePR": true,
+    "dryRun": {
+      "enable": true,
+      "folderName": ""
+    },
+    "tokenPath": "%configDir%/plugins/%pluginID%/env",
+    "api": {
+      "tiersForApi": "Github Free/Pro/Team (default)",
+      "hostname": ""
+    },
+    "workflow": {
+      "commitMessage": "[PUBLISHER] Merge",
+      "name": ""
+    },
+    "otherRepo": [],
+    "verifiedRepo": true,
+    "rateLimit": 4981
+  },
+  "upload": {
+    "behavior": "obsidian",
+    "defaultName": "_preprocessed",
+    "rootFolder": "",
+    "yamlFolderKey": "",
+    "frontmatterTitle": {
+      "enable": false,
+      "key": "title"
+    },
+    "replaceTitle": [],
+    "replacePath": [],
+    "autoclean": {
+      "includeAttachments": true,
+      "enable": false,
+      "excluded": []
+    },
+    "folderNote": {
+      "enable": true,
+      "rename": "_index.md",
+      "addTitle": {
+        "enable": true,
+        "key": "title"
+      }
+    },
+    "metadataExtractorPath": ""
+  },
+  "conversion": {
+    "hardbreak": false,
+    "dataview": true,
+    "censorText": [
+      {
+        "entry": "share: true",
+        "replace": "share: true\\npublish: true\\ndg-publish: true",
+        "flags": "",
+        "after": false
+      },
+      {
+        "entry": "share: false",
+        "replace": "share: false\\npublish: false\\ndg-publish: false",
+        "flags": "",
+        "after": false
+      }
+    ],
+    "tags": {
+      "inline": true,
+      "exclude": [],
+      "fields": []
+    },
+    "links": {
+      "internal": true,
+      "unshared": true,
+      "wiki": false,
+      "slugify": "disable",
+      "unlink": false
+    }
+  },
+  "embed": {
+    "attachments": true,
+    "overrideAttachments": [
+      {
+        "path": "/(_assets\\/_PLUGINS\\/icons)\\/(.*)\\/(.*)\\.(svg)$/",
+        "destination": "quartz/static/icons/$2/{{name}}",
+        "forcePush": true
+      }
+    ],
+    "keySendFile": [
+      "icon_file"
+    ],
+    "notes": true,
+    "folder": "",
+    "convertEmbedToLinks": "keep",
+    "charConvert": "->",
+    "unHandledObsidianExt": [],
+    "sendSimpleLinks": true,
+    "forcePush": true,
+    "useObsidianFolder": true,
+    "bake": {
+      "textBefore": "",
+      "textAfter": ""
+    }
+  },
+  "plugin": {
+    "shareKey": "share",
+    "fileMenu": true,
+    "editorMenu": true,
+    "excludedFolder": [
+      "_assets",
+      "_preprocessed"
+    ],
+    "copyLink": {
+      "enable": false,
+      "links": "",
+      "removePart": [],
+      "addCmd": false,
+      "transform": {
+        "toUri": true,
+        "slugify": "lower",
+        "applyRegex": []
+      }
+    },
+    "noticeError": false,
+    "displayModalRepoEditing": false,
+    "setFrontmatterKey": "Set",
+    "migrated": true
+  },
+  "tabsId": "github-configuration"
+}

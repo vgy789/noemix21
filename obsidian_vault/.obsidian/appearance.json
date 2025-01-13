@@ -1,0 +1,12 @@
+{
+  "accentColor": "#008bff",
+  "cssTheme": "Minimal",
+  "theme": "obsidian",
+  "translucency": false,
+  "enabledCssSnippets": [
+    "dashboard",
+    "dashboard-ReadLineLength",
+    "dynamic-dashboard"
+  ],
+  "baseFontSize": 16
+}
