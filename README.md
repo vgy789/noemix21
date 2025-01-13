@@ -5,11 +5,10 @@
 
 ```shell
 .
-├── Makefile        # Сборка сайта
-├── garden_core     # Движки для генерации сайта
-│   └── quartz      # Основной движок
+├── Makefile
+├── quartz_core     # Движок для генерации сайта
 ├── obsidian_vault  # Контент базы знаний. Ваши заметки
-└── website         # Собранные Makefile’ом сайт
+└── website         # Собранный Makefile’ом сайт
 ```
 
 ## Сборка

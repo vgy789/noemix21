@@ -1,5 +1,5 @@
 SOURCE_VAULT = obsidian_vault/_preprocessed/data
-QUARTZ = garden_core/quartz
+QUARTZ = quartz_core
 WEBSITE_DIR = website
 
 upd_metatable:		## Use the YAML metadata in the notes to create or update a table in notes
