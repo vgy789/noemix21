@@ -71,12 +71,17 @@ create_table_in_file() {
     return 1
   fi
 
-  # Ensure empty lines are replaced with a proper table
-  sed -i "$((yaml_end + 1)) a\\
-| Поле            | Значение         |\n\
-|------------- |---------------- |\n\
-$table\n\
-___" "$file"
+  # Append the table after the YAML block even if only blank lines follow
+  awk -v end="$yaml_end" -v table="$table" '{
+    print
+    if (NR == end) {
+      print ""
+      print "| Поле            | Значение         |"
+      print "|---------------- |---------------- |"
+      printf "%s\n", table
+      print "___"
+    }
+  }' "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
 }
 
 process_md_files_recursive() {
