@@ -8,8 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitLab: "https://repos.21-school.ru/jonnabin/noemix-21",
-      "Rocket.Chat Community": "https://rocketchat-student.21-school.ru/channel/noemix-21",
+      GitHub: "https://repos.21-school.ru/jonnabin/noemix-21",
     },
   }),
 }
