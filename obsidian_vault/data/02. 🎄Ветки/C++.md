@@ -16,14 +16,14 @@ ___
 >  У этой ветки [один общий чат в Telegram](https://t.me/+5xlNV70Bw1w5OTM6)
 ___
 
-> [!note]- Все заметки по проектам C++
+> [!note]- Заметки по всем C++ проектам
 > ```dataview
 > TABLE WITHOUT ID
 > 	file.link AS "Название",
 > 	project AS "Проект",
 > 	date AS "Опубликовано"
 > FROM "data/03. 🌱Ваши заметки" OR "data/04. 🪴Ваши статьи"
-> WHERE branch = [[CPP]] AND project
+> WHERE branch = [[C++]] AND project
 > SORT date DESC, project ASC
 > ``` 
 
@@ -33,14 +33,14 @@ ___
 > 	file.link AS "Название",
 > 	date AS "Опубликовано"
 > FROM "data/03. 🌱Ваши заметки" OR "data/04. 🪴Ваши статьи"
-> WHERE branch = [[CPP]] AND !project
+> WHERE branch = [[C++]] AND !project
 > SORT date DESC, file.link ASC
 > ``` 
 
 ## Проекты
 ```dataviewjs
 const group = "CPP - 1";
-const projects = dv.pages('"data/99. 🗃️Картотека/Все проекты/CPP"').filter(page => 
+const projects = dv.pages('"data/99. 🗃️Картотека/Все проекты/C++"').filter(page => 
     page.tags?.includes('project') && 
     !page.tags?.includes('index') && 
     page.group === group
@@ -85,7 +85,7 @@ if (projects.length === 0) {
 
 ```dataviewjs
 const group = "Algorithms - 1";
-const projects = dv.pages('"data/99. 🗃️Картотека/Все проекты/CPP"').filter(page => 
+const projects = dv.pages('"data/99. 🗃️Картотека/Все проекты/C++"').filter(page => 
     page.tags?.includes('project') && 
     !page.tags?.includes('index') && 
     page.group === group
@@ -130,7 +130,7 @@ if (projects.length === 0) {
 
 ```dataviewjs
 const group = "Algorithms - 2";
-const projects = dv.pages('"data/99. 🗃️Картотека/Все проекты/CPP"').filter(page => 
+const projects = dv.pages('"data/99. 🗃️Картотека/Все проекты/C++"').filter(page => 
     page.tags?.includes('project') && 
     !page.tags?.includes('index') && 
     page.group === group
@@ -175,7 +175,7 @@ if (projects.length === 0) {
 
 ```dataviewjs
 const group = "CPP - 3";
-const projects = dv.pages('"data/99. 🗃️Картотека/Все проекты/CPP"').filter(page => 
+const projects = dv.pages('"data/99. 🗃️Картотека/Все проекты/C++"').filter(page => 
     page.tags?.includes('project') && 
     !page.tags?.includes('index') && 
     page.group === group
@@ -220,7 +220,7 @@ if (projects.length === 0) {
 
 ```dataviewjs
 // проекты без тега group считаются устаревшими
-const projects = dv.pages('"data/99. 🗃️Картотека/Все проекты/CPP"').filter(page => 
+const projects = dv.pages('"data/99. 🗃️Картотека/Все проекты/C++"').filter(page => 
     page.tags?.includes('project') && 
     !page.tags?.includes('index') && 
     page.deprecated === true

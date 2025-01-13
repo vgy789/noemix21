@@ -5,9 +5,9 @@ tags:
   - note
   - exam/practice
   - msk
-project: "[[data/99. 🗃️Картотека/Все проекты/CPP/CPP_Ex]]"
+project: "[[data/99. 🗃️Картотека/Все проекты/C++/CPP_Ex]]"
 s21-authors: []
-branch: "[[CPP]]"
+branch: "[[C++]]"
 source: https://t.me/c/1975595161/116855/
 ---
 

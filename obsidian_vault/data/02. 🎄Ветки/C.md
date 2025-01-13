@@ -12,7 +12,7 @@ title: Язык C
 
 ___
 
-> [!note]- Все заметки по проектам
+> [!note]- Заметки по всем C проектам
 > ```dataview
 > TABLE WITHOUT ID
 > 	file.link AS "Название",

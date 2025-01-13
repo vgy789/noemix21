@@ -3,15 +3,15 @@ share: true
 tags:
   - project
 project-type: team
-branch: "[[CPP]]"
-xp: 400
+branch: "[[C++]]"
+xp: 300
 xp-with-bonus: 
 group: Algorithms - 2
 social-link: 
-edu: https://edu.21-school.ru/project/70795
-project-numeration: A8
+edu: https://edu.21-school.ru/project/70735
+project-numeration: A3
 deprecated: false
-description: В этом проекте вы узнаете об алгоритмах интерполяции и аппроксимации.
+description: 
 ---
 
 ## Заметки и статьи

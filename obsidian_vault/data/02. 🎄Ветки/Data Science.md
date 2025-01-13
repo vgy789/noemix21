@@ -8,7 +8,7 @@ tags:
 >  У этой ветки [один общий чат в Telegram](
 
 ___
-> [!note]- Все заметки по проектам branchname
+> [!note]- Заметки по всем Data Science проектам 
 > ```dataview
 > TABLE WITHOUT ID
 > 	file.link AS "Название",
@@ -19,7 +19,7 @@ ___
 > SORT date DESC, project ASC
 > ``` 
 
-> [!note] Прочие заметки по branchname
+> [!note] Прочие заметки по Data Science
 > ```dataview
 > TABLE WITHOUT ID
 > 	file.link AS "Название",

@@ -2,16 +2,16 @@
 share: true
 tags:
   - project
-project-type: individual
-branch: "[[CPP]]"
-xp: 800
+project-type: team
+branch: "[[C++]]"
+xp: 400
 xp-with-bonus: 
-group: CPP - 1
-social-link: https://t.me/+xTxOxDobbjQxNzAy
-edu: https://edu.21-school.ru/project/69053
-project-numeration: CPP3
+group: Algorithms - 2
+social-link: 
+edu: https://edu.21-school.ru/project/70795
+project-numeration: A8
 deprecated: false
-description: В данном проекте предстоит реализовать игру «Змейка» на языке программирования С++.
+description: В этом проекте вы узнаете об алгоритмах интерполяции и аппроксимации.
 ---
 
 ## Заметки и статьи

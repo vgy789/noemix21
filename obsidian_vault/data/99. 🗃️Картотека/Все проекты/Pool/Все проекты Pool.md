@@ -10,7 +10,7 @@ TABLE WITHOUT ID
 	file.link AS "Название проекта",
 	branch AS "Ветка"
 WHERE 
-	contains(file.folder, this.file.folder) 
+	file.folder = this.file.folder 
 	AND !contains(tags, "index")
 SORT file.name ASC
 ```

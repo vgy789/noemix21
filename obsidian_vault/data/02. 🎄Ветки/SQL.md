@@ -10,7 +10,7 @@ title: Язык SQL
 
 ___
 
-> [!note]- Все заметки по проектам SQL
+> [!note]- Заметки по всем SQL проектам
 > ```dataview
 > TABLE WITHOUT ID
 > 	file.link AS "Название",

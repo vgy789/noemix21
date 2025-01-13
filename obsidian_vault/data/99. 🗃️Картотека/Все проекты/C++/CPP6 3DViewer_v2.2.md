@@ -3,15 +3,15 @@ share: true
 tags:
   - project
 project-type: team
-branch: "[[CPP]]"
+branch: "[[C++]]"
 xp: 600
 xp-with-bonus: 
 group: CPP - 3
 social-link: https://t.me/+D2sccrQhVL5hOWYy
-edu: https://edu.21-school.ru/project/26489
-project-numeration: CPP5
+edu: https://edu.21-school.ru/project/26490
+project-numeration: CPP6
 deprecated: false
-description: В этом проекте вам нужно будет модифицировать приложение, разработанное в проекте 3D Viewer v2.0. Новая версия должна отображать трёхмерный объект не только в виде проволочного каркаса, но и с затенением поверхности.
+description: В этом проекте вам нужно будет модифицировать приложение, разработанное в проекте 3D Viewer v2.1. Новая версия должна рендерить трёхмерную сцену с использованием трассировки лучей.
 ---
 
 ## Заметки и статьи

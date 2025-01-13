@@ -6,7 +6,7 @@ tags:
   - article
 project: 
 s21-authors: []
-branch: "[[CPP]]"
+branch: "[[C++]]"
 source: https://held-stingray-d76.notion.site/Qt-Creator-VPN-bef07cc35c8946dfae0b78f566f23085?pvs=25
 ---
 

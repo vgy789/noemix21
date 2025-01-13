@@ -5,7 +5,7 @@ date:
 tags:
   - article
   - nsk
-project: "[[C3 s21_string➕]]"
+project: "[[C3 s21_string+]]"
 s21-authors:
   - "[[ereva]]"
 branch: "[[C]]"

@@ -16,7 +16,7 @@ TABLE
     choice(link, "[Ссылка 🔗](" + link + ")", "—") AS "Telegram чат",
     → choice(s21-leader, s21-leader, "`¯\_(ツ)_/¯`") AS "Лидер"
 WHERE 
-	contains(file.folder, this.file.folder) 
+	file.folder = this.file.folder 
 	AND file.name != "_index клубов"
 SORT file.name
 ```
@@ -29,7 +29,7 @@ TABLE
     choice(link, "[Ссылка 🔗](" + link + ")", "—") AS "Telegram чат",
     → choice(length(s21-leader) > 0, s21-leader, "`¯\_(ツ)_/¯`") AS "Лидер"
 WHERE 
-	contains(file.folder, this.file.folder) 
+	file.folder = this.file.folder 
 	AND file.name != "_index клубов"
 SORT file.name
 ```

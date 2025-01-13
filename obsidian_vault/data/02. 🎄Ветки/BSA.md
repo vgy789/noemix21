@@ -8,7 +8,7 @@ tags:
 >  У этой ветки [один общий чат в Telegram](https://t.me/+eu_wuvqnkQNjMzVi)
 ___
 
-> [!note]- Все заметки по проектам Business and Systems Analyst
+> [!note]- Заметки по всем Business and Systems Analyst проектам 
 > ```dataview
 > TABLE WITHOUT ID
 > 	file.link AS "Название",

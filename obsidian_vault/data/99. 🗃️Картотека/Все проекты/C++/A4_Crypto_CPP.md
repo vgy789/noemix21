@@ -3,13 +3,13 @@ share: true
 tags:
   - project
 project-type: team
-branch: "[[CPP]]"
-xp: 400
+branch: "[[C++]]"
+xp: 200
 xp-with-bonus: 
-group: Algorithms - 1
+group: Algorithms - 2
 social-link: 
-edu: https://edu.21-school.ru/project/69104
-project-numeration: A2
+edu: https://edu.21-school.ru/project/70757
+project-numeration: A4
 deprecated: false
 description: 
 ---

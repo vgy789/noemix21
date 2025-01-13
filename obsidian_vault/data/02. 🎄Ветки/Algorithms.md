@@ -9,7 +9,7 @@ tags:
 
  ---
 
-> [!note]- Все заметки по проектам Algorithms
+> [!note]- Заметки по всем Algorithms проектам 
 > ```dataview
 > TABLE WITHOUT ID
 > 	file.link AS "Название",

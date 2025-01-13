@@ -3,7 +3,7 @@ share: true
 tags:
   - project
 project-type: team
-branch: "[[CPP]]"
+branch: "[[C++]]"
 xp: 350
 xp-with-bonus: 
 group: Algorithms - 1

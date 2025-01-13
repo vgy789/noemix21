@@ -8,7 +8,7 @@ tags:
 >  У этой ветки [один общий чат в Telegram](https://t.me/+MPogbcEDJ-JhZWE6)
 
 ___
-> [!note]- Все заметки по проектам DevOPS
+> [!note]- Заметки по всем DevOPS проектам
 > ```dataview
 > TABLE WITHOUT ID
 > 	file.link AS "Название",

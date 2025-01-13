@@ -5,10 +5,10 @@ tags:
   - note
   - nsk
   - video/lecture
-project: "[[data/99. 🗃️Картотека/Все проекты/CPP/SmartCalc_v2.0]]"
+project: "[[data/99. 🗃️Картотека/Все проекты/C++/SmartCalc_v2.0]]"
 s21-authors:
   - "[[hanalesh]]"
-branch: "[[CPP]]"
+branch: "[[C++]]"
 source: https://held-stingray-d76.notion.site/C-d491bee014b34651a8e7b93f6be2631c
 ---
 

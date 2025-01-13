@@ -3,7 +3,7 @@ share: true
 tags:
   - project
 project-type: individual
-branch: "[[CPP]]"
+branch: "[[C++]]"
 xp: 800
 xp-with-bonus: 
 social-link: 

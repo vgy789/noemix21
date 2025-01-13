@@ -2,16 +2,16 @@
 share: true
 tags:
   - project
-project-type: individual
-branch: "[[CPP]]"
+project-type: team
+branch: "[[C++]]"
 xp: 350
 xp-with-bonus: 
-group: CPP - 1
-social-link: https://t.me/+4bxHER_tE0JiYTMy
-edu: https://edu.21-school.ru/project/26485
-project-numeration: CPP1
+group: Algorithms - 2
+social-link: 
+edu: https://edu.21-school.ru/project/70767
+project-numeration: A6
 deprecated: false
-description: В этом проекте вы изучите и разработаете основные утилиты Bash для работы с текстами на языке программирования C.
+description: 
 ---
 
 ## Заметки и статьи

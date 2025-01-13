@@ -5,8 +5,8 @@ tags:
   - note
   - nsk
 project: 
-s21-authors: []
-branch: 
+s21-authors: 
+branch: "[[C++]]"
 source: https://held-stingray-d76.notion.site/Qt-VPN-6fa8e53a1afe4d70a79728a3fb22c3fd
 ---
 

@@ -2,16 +2,16 @@
 share: true
 tags:
   - project
-project-type: team
-branch: "[[CPP]]"
-xp: 200
+project-type: individual
+branch: "[[C++]]"
+xp: 800
 xp-with-bonus: 
-group: Algorithms - 2
-social-link: 
-edu: https://edu.21-school.ru/project/70757
-project-numeration: A4
+group: CPP - 1
+social-link: https://t.me/+xTxOxDobbjQxNzAy
+edu: https://edu.21-school.ru/project/69053
+project-numeration: CPP3
 deprecated: false
-description: 
+description: В данном проекте предстоит реализовать игру «Змейка» на языке программирования С++.
 ---
 
 ## Заметки и статьи
