@@ -38,8 +38,8 @@
       "excluded": []
     },
     "folderNote": {
-      "enable": false,
-      "rename": "_index.md",
+      "enable": true,
+      "rename": "index.md",
       "addTitle": {
         "enable": true,
         "key": "title"
@@ -126,5 +126,5 @@
     "setFrontmatterKey": "Set",
     "migrated": true
   },
-  "tabsId": "github-configuration"
+  "tabsId": "upload-configuration"
 }
