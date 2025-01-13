@@ -1,5 +1,8 @@
-.DS_Store
-.gitignore
+# IDE folders
+.idea/
+.vscode/
+.DS_Store/
+
 node_modules
 public
 prof
@@ -9,3 +12,8 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+static_md
+
+
+output
+content

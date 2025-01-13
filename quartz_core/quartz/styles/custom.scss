@@ -1,3 +1,45 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+/* Список по колонкам */
+.dashboard {
+    font-family: inherit;
+    padding: 20px 25px;
+}
+
+.dashboard > ul:first-of-type {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.dashboard ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.dashboard ul li {
+    min-width: 200px;
+    max-width: 300px;
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    padding: 0;
+    text-align: left;
+    color: inherit;
+    overflow-wrap: break-word;
+    margin: 4px;
+}
+
+.dashboard ul li ul {
+    margin-top: 4px;
+    padding-left: 40px;
+    list-style-type: disc;
+}
+
+.dashboard h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
