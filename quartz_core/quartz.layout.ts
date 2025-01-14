@@ -9,6 +9,8 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/vgy789/noemix21",
+      "Внести вклад": "https://noemix21.ru/Внести-вклад",
+      "Лицензия": "https://noemix21.ru/лицензия",
     },
   }),
 }
@@ -29,7 +31,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    Component.Graph(),
+    Component.DesktopOnly(Component.Graph()),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
