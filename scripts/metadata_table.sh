@@ -9,9 +9,19 @@ extract_list_from_block() {
   local file="$1"
   local block_name="$2"
 
-  awk "/^$block_name:/ {found=1; next} /^\\S/ {found=0} found && /^ *- / {gsub(/^- */, \"\"); gsub(/^\"|\"$/, \"\"); print}" "$file" |
-    sed 's/^\[\[/[[/g; s/\]\]$/]]/g' | # Ensure proper brackets
-    tr '\n' ',' | sed 's/,/, /g; s/, $//'
+  awk -v block_name="$block_name" '
+    $0 ~ "^" block_name ":" {found=1; next}
+    /^\S/ {found=0}
+    found && !/^\s*$/ {
+      gsub(/^ *- |"/,""); # Удаляем пробелы/дефисы и кавычки
+      if (list) {
+        list = list ", " $0;
+      } else {
+        list = $0;
+      }
+    }
+    END {print list}
+  ' "$file"
 }
 
 # Extracts a value associated with a field from a file. Removes unnecessary quotes and trims whitespace.
