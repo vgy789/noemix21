@@ -1,116 +1,126 @@
 #!/bin/bash
 
-# Global variables
-DIRECTORY="$1"
+# Set locale for consistent string processing.
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
 
-extract_block_list() {
+# Extracts a list of items from a block defined by a header in a file, removes unnecessary dashes, quotes, and formats the output.
+extract_list_from_block() {
   local file="$1"
   local block_name="$2"
-  local list
 
-  list=$(awk "/^$block_name:/ {found=1; next} /^\S/ {found=0} found && /^ *- / {gsub(/^- */, \"\"); print}" "$file" |
-    sed 's/^[[:space:]]*- //g' | tr '\n' ',' | sed 's/,/, /g; s/, $//')
-    
-  printf "%s\n" "$list"
+  awk "/^$block_name:/ {found=1; next} /^\\S/ {found=0} found && /^ *- / {gsub(/^- */, \"\"); gsub(/^\"|\"$/, \"\"); print}" "$file" |
+    sed 's/^\[\[/[[/g; s/\]\]$/]]/g' | # Ensure proper brackets
+    tr '\n' ',' | sed 's/,/, /g; s/, $//'
 }
 
-extract_field() {
+# Extracts a value associated with a field from a file. Removes unnecessary quotes and trims whitespace.
+extract_field_value() {
   local file="$1"
   local field="$2"
-  local result
 
-  result=$(grep "^$field:" "$file" | sed -E "s/^$field:\s*(.*)/\1/" | xargs)
-  printf "%s\n" "$result"
+  awk -F': ' -v field="$field" '$1 == field {gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2); gsub(/^"|"$/, "", $2); print $2; exit}' "$file"
 }
 
-create_table_in_file() {
+# Inserts a formatted table into a Markdown file based on extracted fields.
+insert_metadata_table() {
   local file="$1"
-  local city leaders social_link authors branch project project_type xp xp_with_bonus description deprecated date source yaml_end source_md edu_md table
 
-  printf "Processing file: %s\n" "$file"
-
-  city=$(extract_field "$file" "city")
-  leaders=$(extract_block_list "$file" "s21-leader")
-  social_link=$(extract_field "$file" "social-link")
-  authors=$(extract_block_list "$file" "s21-authors")
-  branch=$(extract_field "$file" "branch")
-  project=$(extract_field "$file" "project")
-  project_type=$(extract_field "$file" "project-type")
-  xp=$(extract_field "$file" "xp")
-  xp_with_bonus=$(extract_field "$file" "xp-with-bonus")
-  description=$(extract_field "$file" "description")
-  date=$(extract_field "$file" "date")
-  source=$(extract_field "$file" "source")
-  deprecated=$(extract_field "$file" "deprecated")
-  edu=$(extract_field "$file" "edu")
+  local city leaders social_link authors branch project project_type xp xp_with_bonus deprecated date source edu
+  city=$(extract_field_value "$file" "city")
+  leaders=$(extract_list_from_block "$file" "s21-leader")
+  social_link=$(extract_field_value "$file" "social-link")
+  authors=$(extract_list_from_block "$file" "s21-authors")
+  branch=$(extract_field_value "$file" "branch")
+  project=$(extract_field_value "$file" "project")
+  project_type=$(extract_field_value "$file" "project-type")
+  xp=$(extract_field_value "$file" "xp")
+  xp_with_bonus=$(extract_field_value "$file" "xp-with-bonus")
+  date=$(extract_field_value "$file" "date")
+  source=$(extract_field_value "$file" "source")
+  deprecated=$(extract_field_value "$file" "deprecated")
+  edu=$(extract_field_value "$file" "edu")
 
   deprecated=${deprecated:-"false"}
-  local deprecated_label
-  deprecated_label=$([[ "$deprecated" == "true" ]] && echo "Да" || echo "Нет")
-  [[ -n $edu ]] && edu_md="$edu"
-  [[ -n $social_link ]] && source_md="[Ссылка]($social_link)"
+  local deprecated_label="$([[ "$deprecated" == "true" ]] && echo "Да" || echo "Нет")"
+  local edu_md="${edu:-}"
+  local source_md="${social_link:+[Ссылка]($social_link)}"
 
-  [[ -n $city ]] &&         table+="| Город       | $city         |\n"
-  [[ -n $leaders ]] &&      table+="| Лидеры      | $leaders      |\n"
-  [[ -n $social_link ]] &&  table+="| Группа      | $source_md      |\n"
-  [[ -n $branch ]] &&       table+="| Ветка       | $branch        |\n"
-  [[ -n $project ]] &&      table+="| Проект      | $project      |\n"
-  [[ -n $authors ]] &&      table+="| s21-Автор   | $authors      |\n"
-  [[ -n $date ]] &&        table+="| Дата        | $date          |\n"
-  [[ -n $source ]] &&      table+="| Источник    | $source        |\n"
-  [[ -n $description ]] &&  table+="| Описание    | $description    |\n"
-  [[ -n $project_type ]] && table+="| Тип         | $project_type   |\n"
-  [[ -n $xp ]] &&          table+="| xp          | $xp            |\n"
-  [[ -n $xp_with_bonus ]] && table+="| xp с бонусом | $xp_with_bonus  |\n"
-  [[ -n $edu_md ]] &&      table+="| На платформе | $edu_md        |\n"
-  [[ "$deprecated" != "false" ]] && table+="| Устаревший   | $deprecated_label|\n"
+  # Ensure leaders are properly formatted without dashes and quotes
+  leaders=$(echo "$leaders" | sed 's/^- //g; s/"//g; s/,/, /g')
 
+  local table=""
+  [[ -n "$city" ]] && table+="| Город           | $city           |\n"
+  [[ -n "$leaders" ]] && table+="| Лидеры          | $leaders        |\n"
+  [[ -n "$social_link" ]] && table+="| Группа          | $source_md      |\n"
+  [[ -n "$branch" ]] && table+="| Ветка           | $branch         |\n"
+  [[ -n "$project" ]] && table+="| Проект          | $project        |\n"
+  [[ -n "$authors" ]] && table+="| s21-Автор       | $authors        |\n"
+  [[ -n "$date" ]] && table+="| Дата            | $date           |\n"
+  [[ -n "$source" ]] && table+="| Источник        | $source         |\n"
+  [[ -n "$project_type" ]] && table+="| Тип             | $project_type   |\n"
+  [[ -n "$xp" ]] && table+="| xp              | $xp             |\n"
+  [[ -n "$xp_with_bonus" ]] && table+="| xp с бонусом    | $xp_with_bonus  |\n"
+  [[ -n "$edu_md" ]] && table+="| На платформе    | $edu_md         |\n"
+  [[ "$deprecated" == "true" ]] && table+="| Устаревший      | $deprecated_label |\n"
+
+  if [[ -z "$table" ]]; then
+    printf "No metadata found in %s. Skipping.\n" "$file"
+    return 0
+  fi
+
+  local yaml_end
   yaml_end=$(grep -n '^---$' "$file" | sed -n '2p' | cut -d: -f1)
-  if [[ -z $yaml_end ]]; then
+  if [[ -z "$yaml_end" ]]; then
     printf "Error: YAML block not found in %s\n" "$file" >&2
     return 1
   fi
 
-  # Append the table after the YAML block even if only blank lines follow
   awk -v end="$yaml_end" -v table="$table" '{
     print
     if (NR == end) {
       print ""
-      print "| Поле            | Значение         |"
-      print "|---------------- |---------------- |"
+      print "| Поле             | Значение          |"
+      print "|-----------------|-----------------|"
       printf "%s\n", table
       print "___"
     }
   }' "$file" > "${file}.tmp" && mv "${file}.tmp" "$file"
 }
 
-process_md_files_recursive() {
-  local dir="$1"
-  if [[ ! -d "$dir" ]]; then
-    printf "Error: Directory %s does not exist.\n" "$dir" >&2
+# Processes Markdown files recursively within a directory.
+process_markdown_files() {
+  local directory="$1"
+
+  if [[ ! -d "$directory" ]]; then
+    printf "Error: Directory '%s' not found.\n" "$directory" >&2
     return 1
   fi
 
-  find "$dir" -type f -name "*.md" | while IFS= read -r file; do
-    local parent_dir file_name
+  export -f extract_list_from_block extract_field_value insert_metadata_table
+
+  find "$directory" -type f -name "*.md" -print0 | xargs -0 -P "$(nproc)" -I{} bash -c '
+    file="{}"
     parent_dir=$(basename "$(dirname "$file")")
     file_name=$(basename "$file" .md)
 
     if [[ "$file_name" != "$parent_dir" ]]; then
-      create_table_in_file "$file"
+      insert_metadata_table "$file"
     else
-      printf "Skipping: %s (file name matches parent directory name)\n" "$file"
+      printf "Skipping: %s (filename matches parent directory)\n" "$file"
     fi
-  done
+  '
 }
 
 main() {
-  if [[ -z "$DIRECTORY" ]]; then
+  local directory="$1"
+
+  if [[ -z "$directory" ]]; then
     printf "Usage: %s <directory>\n" "$0" >&2
     exit 1
   fi
 
-  process_md_files_recursive "$DIRECTORY" || exit 1
+  process_markdown_files "$directory" || exit 1
 }
 
 main "$@"

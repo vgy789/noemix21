@@ -1,47 +1,45 @@
 #!/bin/bash
 
-# Global variable
-SEARCH_DIR="$1"
+# Function to remove the `data/` prefix from specified attributes
+update_data() {
+  local file="$1"
+  local temp_file=$(mktemp)
 
-# Function to replace keys in a file
-replace_keys_in_file() {
-    local file="$1"
-
-    printf "Processing file: %s\n" "$file"
-
-    # Replace keys in the file
-    sed -i \
-        -e 's/href="data\//href="/g' \
-        -e 's/aria-label="data\//aria-label="/g' \
-        -e 's/data-href="data\//data-href="/g' \
-        "$file"
-
-    # printf "Updated file: %s\n" "$file"
+  # Remove data/ prefix
+  sed -E 's#(href|src|data-slug)="([^"]*)data/([^"]*)"#\1="\2\3"#g' "$file" > "$temp_file" && mv "$temp_file" "$file"
+  # Update the href attributes that contain ../.././Клубы to ../Клубы
+  sed -E 's#href="\.\./\.\./\./(Клубы/[^"]*)"#href="../\1"#g' "$file" > "$temp_file" && mv "$temp_file" "$file"
 }
 
-# Process files recursively
-process_files_recursive() {
-    local dir="$1"
+# Function to process all .html files in a directory
+process_directory() {
+  local dir="$1"
 
-    if [[ ! -d "$dir" ]]; then
-        printf "Error: Directory %s does not exist.\n" "$dir" >&2
-        return 1
-    fi
+  # Check if the directory exists
+  if [[ ! -d "$dir" ]]; then
+    printf "Error: '%s' is not a directory.\n" "$dir" >&2
+    return 1
+  fi
 
-    # Find all files and process them
-    find "$dir" -type f | while IFS= read -r file; do
-        replace_keys_in_file "$file"
-    done
+  # Find all .html files and process them with the two functions
+  find "$dir" -type f -name "*.html" -print0 | while IFS= read -r -d $'\0' file; do
+    update_data "$file"
+  done
 }
 
-# Main script
+# Main function to validate input and initiate processing
 main() {
-    if [[ -z "$SEARCH_DIR" ]]; then
-        printf "Usage: %s <directory>\n" "$0" >&2
-        exit 1
-    fi
+  local target="$1"
 
-    process_files_recursive "$SEARCH_DIR" || exit 1
+  # Check if the target directory is provided
+  if [[ -z "$target" ]]; then
+    printf "Usage: %s <directory>\n" "$0" >&2
+    exit 1
+  fi
+
+  # Start processing the directory
+  process_directory "$target"
 }
 
+# Execute the script with the provided arguments
 main "$@"
