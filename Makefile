@@ -29,6 +29,9 @@ nginx:		# Start webserver on 8080 port
 clean:		# Cleaning the website directory
 	rm -rf $(WEBSITE_DIR)/*
 
+quartz_pull:
+	git subtree pull --prefix=quartz_core https://github.com/jackyzha0/quartz.git v4 --squash
+
 help:		## Display this help screen
 	@grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
 	awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

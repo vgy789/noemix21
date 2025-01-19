@@ -1,6 +1,0 @@
-[submodule "garden_core/quartz"]
-	path = garden_core/quartz
-	url = https://github.com/jackyzha0/quartz
-[submodule "C2_s21_stringplus-4"]
-	path = C2_s21_stringplus-4
-	url = ssh://git@repos-ssh.21-school.ru:2289/students/C2_s21_stringplus.ID_395950/PEACE_DEATH_DUO.9U3W3IyzS_KnDGNNeDt89w/C2_s21_stringplus-4.git
