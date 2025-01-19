@@ -1,6 +1,6 @@
 ---
 share: true
-date: 
+date: 2025-01-17
 tags:
   - note
 project: "[[DO8 DevOps. Project 8]]"
@@ -8,7 +8,7 @@ s21-authors:
   - "[[lomashag]]"
 branch: "[[DevOPS]]"
 source: 
-description: ""
+description: В этой заметке собраны полезные ссылки, советы и примеры касающиеся DevOps8.
 ---
 
 ## Литература и видео:
