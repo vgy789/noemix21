@@ -5,9 +5,10 @@ tags:
   - note
   - nsk
 project: 
-s21-authors: []
+s21-authors: 
 branch: "[[Python]]"
 source: https://held-stingray-d76.notion.site/Python-232deae559fb4cab8fd3e2db06db5755
+title: Материалы по Python
 ---
 
 ## Материалы по python

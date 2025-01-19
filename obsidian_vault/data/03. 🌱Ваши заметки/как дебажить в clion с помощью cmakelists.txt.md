@@ -9,6 +9,7 @@ s21-authors:
   - "[[mtasia]]"
 branch: "[[C++]]"
 source: https://held-stingray-d76.notion.site/CLion-CmakeLists-txt-8fc19a4bc446493c8198f6e41e4fb64d
+title: Как дебажить в CLion с помощью CmakeLists.txt
 ---
 
 ## Как дебажить в CLion с помощью CmakeLists.txt

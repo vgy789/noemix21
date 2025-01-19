@@ -9,6 +9,7 @@ s21-authors:
   - "[[marylynt]]"
 branch: 
 source: https://held-stingray-d76.notion.site/macOS-003546bad86746d0a22b02182f3b49b1
+title: Комбинации клавиш для быстрой работы в macOS
 ---
 
 ## Комбинации клавиш для быстрой работы в macOS

@@ -5,9 +5,10 @@ tags:
   - note
   - nsk
 project: 
-s21-authors: []
+s21-authors: 
 branch: "[[DevOPS]]"
 source: https://held-stingray-d76.notion.site/Alpine-Linux-f0782659335a40e285a06119bfbb8b79
+title: Опыт использования Alpine Linux
 ---
 
 ## Опыт использования Alpine Linux

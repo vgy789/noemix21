@@ -9,6 +9,7 @@ s21-authors:
 branch: "[[DevOPS]]"
 source: 
 description: В этой заметке собраны полезные ссылки, советы и примеры касающиеся DevOps7. Примеры конфигурации для работы с Vagrant.
+title: DevOps7 советы от lomashag
 ---
 
 ## Литература и видео:

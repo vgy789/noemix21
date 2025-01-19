@@ -9,6 +9,7 @@ s21-authors:
   - "[[ptyrande]]"
 branch: "[[C]]"
 source: https://21-school-by-students.notion.site/8dd1f9ac4324444ab62fb78fb808981f
+title: Преобразование типов через Union и разыменование
 ---
 
 ## Преобразование типов

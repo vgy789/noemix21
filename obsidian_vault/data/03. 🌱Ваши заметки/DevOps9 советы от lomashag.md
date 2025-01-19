@@ -9,6 +9,7 @@ s21-authors:
 branch: "[[DevOPS]]"
 source: 
 description: В этой заметке собраны полезные ссылки, советы и примеры касающиеся DevOps9.
+title: DevOps9 советы от lomashag
 ---
 
 ## Литература и видео:
