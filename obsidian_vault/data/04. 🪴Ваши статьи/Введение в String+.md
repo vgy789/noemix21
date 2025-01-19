@@ -11,6 +11,7 @@ s21-authors:
 branch: "[[C]]"
 title: Введение в String+ – ereva
 source: https://held-stingray-d76.notion.site/String-b71daf23ecce4ba5bf1a8e3da3444b1c
+description: Поздравляю вас с прохождением интенсива и приветствую на основе! Ваш путь будет длителен и непрост, но я постараюсь сделать ваш второй, один из важный шагов, чуточку легче :)
 ---
 
 ## Введение в String+

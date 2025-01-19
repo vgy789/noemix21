@@ -5,9 +5,10 @@ tags:
   - article
   - note
 project: 
-s21-authors: []
+s21-authors: 
 branch: "[[C++]]"
 source: https://held-stingray-d76.notion.site/Qt-Creator-VPN-bef07cc35c8946dfae0b78f566f23085?pvs=25
+description: Для установки можно использовать Offline Installer, он не требует регистрации, но его для его скачивания требуется VPN, поэтому я залил его себе на я.диск. Если у вас есть второй комп с VPN, и вы не хотите использовать мою ссылку, то можете скачать файл с официального сайта:Для установки достаточно открыть .dmg файл, и перетащить из него Qt Creator.appв `goinfre`.
 ---
 
 ## Установка Qt Creator без использования VPN

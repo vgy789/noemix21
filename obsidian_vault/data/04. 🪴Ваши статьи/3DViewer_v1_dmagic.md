@@ -11,6 +11,7 @@ s21-authors:
 branch: "[[C]]"
 title: 3DViewer_v1_dmagic – dmagic
 source: https://21-school-by-students.notion.site/3D-Viewer_v1-0-61eefd10077a4b49ac4b8449e640acf9
+description: 1. Разбор структуры .obj файла. 2. Выделение необходимых структур. 3. Отрисовка.
 ---
 
 ## Первый раздел – .obj файлы, структура проекта, отрисовка

@@ -5,10 +5,11 @@ tags:
   - article
   - nsk
 project: "[[DO5_SimpleDocker]]"
-s21-authors: []
+s21-authors: 
 branch: "[[DevOPS]]"
 title: 
 source: https://held-stingray-d76.notion.site/Use-docker-with-VSCode-748c373248dc4d869a1e1876ac9c5663
+description: Устанавливаем расширения Docker и Remote - Containers. Обязательно установите и включите Docker, перед тем как использовать его в VSCode. После установки данных расширений у вас появиться две новые вещи в VSCode. Новая иконка в инструментах слева. А так же возможность собирать Docker образы, просто кликнув правой кнопкой на докер файл и выбрав Build Image...*
 ---
 
 ## Use docker with VSCode

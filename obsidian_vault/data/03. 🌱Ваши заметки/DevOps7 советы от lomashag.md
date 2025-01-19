@@ -7,14 +7,12 @@ project: "[[DO7 DevOps. Project 7]]"
 s21-authors:
   - "[[lomashag]]"
 branch: "[[DevOPS]]"
+description: "В этой заметке собраны полезные ссылки, советы и примеры конфигурации для работы с Vagrant и Docker. Он включает в себя информацию о том, как правильно настраивать виртуальные машины, использовать скрипты для автоматизации установки компонентов, а также сравнение различных образов виртуальных машин."
 source: 
----
-
 ---
 
 ## Литература и видео:
 
-~~- [Понимаем функцию enumerate() в Python на примере кода](https://sky.pro/wiki/python/ponimaem-funktsiyu-enumerate-v-python-na-primere-koda/)~~
 - [Docker Swarm для самых маленьких / Хабр](https://habr.com/ru/articles/659813/)
 - [Что такое Vagrant: установка, запуск, использование](https://ru.hexlet.io/blog/posts/vagrant)
 

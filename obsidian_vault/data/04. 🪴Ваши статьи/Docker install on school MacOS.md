@@ -5,9 +5,10 @@ tags:
   - article
   - nsk
 project: "[[DO5_SimpleDocker]]"
-s21-authors: []
+s21-authors: 
 branch: "[[DevOPS]]"
 source: https://held-stingray-d76.notion.site/Docker-install-on-school-iMacs-f1efffc97288411fa27194970a07730e
+description: Для начала заходим в Managed Software Center. Видим там Docker нажимаем INSTALL. Ждём пока установится, чилим. После установки очень важно не запускать приложение, иначе вы рискуете потерять все свободное место на диске, которое докер не постесняется скушать.Что бы этого избежать предварительно
 ---
 
 ## Docker install on school MacOS

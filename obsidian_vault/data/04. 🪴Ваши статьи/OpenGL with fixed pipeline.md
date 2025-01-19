@@ -11,6 +11,7 @@ s21-authors:
 branch: "[[C]]"
 title: OpenGL with fixed pipeline – knikia
 source: https://21-school-by-students.notion.site/OpenGL-with-fixed-pipeline-28716878a15245eba648faabcc10bf48
+description: Сразу оговорюсь, что я использовал функционал старых версий OpenGL.И многие функции являются "deprecated", но для наших целей этого вполнедостаточно, потому что нам необходимо рисовать примитивы такие как линиии точки. От использования современного OpenGL с шейдерами (прим. программывыполняемые прямо на GPU), я отказался в первую очередь
 ---
 
 ## OpenGL with fixed pipeline

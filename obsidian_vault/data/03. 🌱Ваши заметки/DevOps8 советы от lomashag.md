@@ -8,6 +8,7 @@ s21-authors:
   - "[[lomashag]]"
 branch: "[[DevOPS]]"
 source: 
+description: ""
 ---
 
 ## Литература и видео:

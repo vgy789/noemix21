@@ -6,9 +6,10 @@ tags:
   - msk
   - note
 project: "[[C_Ex]]"
-s21-authors: []
+s21-authors: 
 branch: "[[C]]"
 source: https://t.me/c/1975595161/116855/
+description: Это некоторые вопросы, которые мне не попались на первой попытке сдачи экзамена, но попались сегодня, на второй.int const *ptr. Можно ли изменить значение или указатель?Scanf(). Что возвращает?Regex и wildcard
 ---
 
 > [!quote] 

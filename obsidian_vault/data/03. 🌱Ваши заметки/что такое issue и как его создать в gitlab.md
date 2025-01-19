@@ -9,6 +9,7 @@ topic:
 s21-authors:
   - "[[gehnaeli]]"
 source: https://repos.21-school.ru/gehnaeli/knowledge-base-nsk/-/blob/master/contributing/issues.md
+description: Issue — это способ обозначить задачу, предложить свою идею или просто начать обсуждение темы, связанной с проектом. Каждый Issue представляет собой страницу с кратким описанием темы и комментариями для обсуждения.
 ---
 
 ## Что такое Issue и как его создать?
