@@ -6,9 +6,9 @@ tags:
   - msk
   - note
 project: 
-s21-authors: []
+s21-authors: 
 branch: "[[Algorithms]]"
-source: 
+source: https://t.me/c/1975595161/116855/
 ---
 
 В экзамене 30 вопросов, в каждом по 1 правильному ответу. 

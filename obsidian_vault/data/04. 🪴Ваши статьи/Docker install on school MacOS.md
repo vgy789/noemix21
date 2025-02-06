@@ -4,7 +4,7 @@ date:
 tags:
   - article
   - nsk
-project: "[[DO5_SimpleDocker]]"
+project: 
 s21-authors: 
 branch: "[[DevOPS]]"
 source: https://held-stingray-d76.notion.site/Docker-install-on-school-iMacs-f1efffc97288411fa27194970a07730e

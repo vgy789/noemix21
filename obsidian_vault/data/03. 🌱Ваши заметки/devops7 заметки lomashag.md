@@ -7,23 +7,22 @@ project: "[[DO7 DevOps. Project 7]]"
 s21-authors:
   - "[[lomashag]]"
 branch: "[[DevOPS]]"
-source: 
-description: В этой заметке собраны полезные ссылки, советы и примеры касающиеся DevOps7. Примеры конфигурации для работы с Vagrant.
-title: DevOps7 советы от lomashag
+source: https://burnt-aunt-28e.notion.site/s21_Devops-05b03f080a6046ab90507df5b990f6b2
+description: В этой заметке собраны полезные ссылки, советы и примеры касающиеся DevOps7.
+title: DevOps7 заметки lomashag
 ---
 
 ## Литература и видео:
 
+- [Introduction to Docker Compose \| Baeldung on Ops](https://www.baeldung.com/ops/docker-compose)
 - [Docker Swarm для самых маленьких / Хабр](https://habr.com/ru/articles/659813/)
 - [Что такое Vagrant: установка, запуск, использование](https://ru.hexlet.io/blog/posts/vagrant)
+- [Docker Networking – Basics, Network Types & Examples - DEV Community](https://dev.to/tusharops_29/docker-networking-basics-network-types-examples-5ed7)
 
 ## Советы:
 
 - Vagrant лучше устанавливать либо на windows, либо на линукс(нативный). На wsl головная боль. На процессорах amd могут быть конфликты с amd v(я лично отключил его, в таком случае не будет работать docker)
-
-- Чтобы ускорить сборку виртуалок, можно использовать `vagrant up --parallel`
-
-- На Vagrant можно использовать скрипт для установки компонентов. Самый удобный `node.vm.provision "shell", path: "[setup.sh](http://setup.sh/)", args: "node01"` (СКРИПТ НУЖНО ПИСАТЬ САМОМУ, аргументы необязательно). 
+- На Vagrant можно использовать скрипт для установки компонентов. Самый удобный `node.vm.provision "shell", path: "setup.sh", args: "node01"` (СКРИПТ НУЖНО ПИСАТЬ САМОМУ, аргументы необязательно). 
 Пример скрипта:
 ```shell
 #!/bin/bash
@@ -103,3 +102,5 @@ service docker start
 sleep 5
 addgroup vagrant docker
 ```
+- Изучите сети в docker swarm. Для чего нужны overlay и другие. И чем отличается local от overlay сети.
+Если использовать docker compose для поднятия сервисов, то разворачивается локально и создаёт сеть local. Если использовать docker stack deploy, то создаётся сеть overlay(для docker swarm).
