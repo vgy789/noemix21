@@ -32,13 +32,15 @@ SORT file.name ASC
 ___
 
 ## 🖇️ Ссылки
-- [[Проекты сообщества]]
-- Официальные пространства Школы
-	- [Сайт 21](https://21-school.ru)
-	- [Telegram: @school21sber](https://t.me/school21sber)
-	- [applicant](https://applicant.21-school.ru)
-	- [Платформа](https://edu.21-school.ru)
-	- [GitLab](https://repos.21-school.ru)
+[[Проекты сообщества]]
+
+
+Официальные пространства Школы
+- [Сайт 21](https://21-school.ru)
+- [Telegram: @school21sber](https://t.me/school21sber)
+- [applicant](https://applicant.21-school.ru)
+- [Платформа](https://edu.21-school.ru)
+- [GitLab](https://repos.21-school.ru)
 
 ## ℹ️ О проекте…
 - [[Лицензия]]
