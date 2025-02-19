@@ -10,7 +10,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/vgy789/noemix21",
       "Внести вклад": "https://noemix21.ru/Внести-вклад",
-      "Лицензия": "https://noemix21.ru/лицензия",
+      "Лицензия": "https://noemix21.ru/Лицензия",
     },
   }),
 }
